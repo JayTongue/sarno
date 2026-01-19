@@ -16,11 +16,11 @@ The approach is to build a system that will find the optimal position of tables 
 
 For instance, if all tables are along one wall, they are going to be tight together, and the rest of the room will be underutilized:
 
-![](https://github.com/JayTongue/sarno/blob/main/exdhibits/bad_tables.png)
+![](exhibits/bad_tables.png){width=60%}
 
 conversely, if the tables are spread out from the walls, then their influence will saturate more of the room, representing utilized space throughout the room.
 
-![](https://github.com/JayTongue/sarno/blob/main/exdhibits/good_tables.png)
+![](exhibits/good_tables.png){width=60%}
 
 This change can be measured by the increase in the space under the graph. Note that any given point will be mathematically influenced at any distance by every table. As such, the height of the graph at every point is the maximum of the influence by each table.
 
@@ -58,9 +58,9 @@ $$I_i(\mathbf{x}) = e^{-\lVert\mathbf{x} - \mathbf{p}_i\rVert^2/\sigma^2}$$
 where 
 * `x` is the point being evaluated, 
 * `p` is the table whose influence is being determined of count `i`, and '
-* `σ` is the standard deviation. 
+* $\sigma$ is the standard deviation. 
 
-`σ` is defined as `g * r`, where `g` is a hyperparameter coefficient to represent table size, and `r` is the radius of the table. 
+$\sigma$ is defined as `g * r`, where `g` is a hyperparameter coefficient to represent table size, and `r` is the radius of the table. 
 
 Written out fully, assuming `g` = 3, the equasion is given as follows:
 
@@ -102,7 +102,7 @@ This vector, along with constraints and bounds, can be given to Scipy to optimiz
 
 The results seem accurate to the author's best determination. For instance, five tables, with a speaker's lectern at (0, 0), a table radius of 2, and a table scale of 2 yields this optimimal layout:
 
-![](https://github.com/JayTongue/sarno/blob/main/exdhibits/sample_tables.png)
+![](exhibits/sample_tables.png)
 
 
 The numerical coordinates are:
