@@ -3,10 +3,10 @@ Justin Tung, 2026
 
 -------------------------------
 
-### I. Overview
+## I. Overview
 This is a quick weekend project to try to tackle a problem of how to arrange tables in a room in order to optimize the position of circular tables in a room.
 
-### II. Modeling and Abstraction
+## II. Modeling and Abstraction
 
 The typical way problems I have seen problems like this are typically solved with pairwise distance calculations (edge-to-edge). I wanted to see if I could develop a different solution that is more fun, and maybe even more elegant.
 
@@ -47,7 +47,7 @@ where
 
 Finally, in the room that initiated this idea, the presenter stands presents from a corner where there is a lectern and a screen. Accordingly, this is modeled as an additional table center point in that corner, but it is not bound by the constraint that the table cannot be past the edge of the dimensions of the room.
 
-### B. Gaussian Table Representation
+#### B. Gaussian Table Representation
 
 After assessing a few different possibilities, a Gaussian distribution was the best choice for how each table ought to augment the underlying field. this is because space around tables is not linearily usable. Given both the reality of humans sitting and the geometric propagaition of space around center points, the Gaussian distribution made sense to use. 
 
@@ -70,7 +70,7 @@ Therefore, across several different tables, the full model is:
 
 $h(\mathbf{x}) = \max_{i \in \{1...n\}} I_i(\mathbf{x})$
 
-### C. Integrating with Reimann Summation. 
+#### C. Integrating with Reimann Summation. 
 
 Although each point can be evaluated with `h(x)` as defined above, finding the integral of the resulting function proved challenging. 
 
