@@ -100,7 +100,7 @@ This vector, along with constraints and bounds, can be given to Scipy to optimiz
 
 ## IV. Results
 
-The results seem accurate to the author's best determination. For instance, five tables, with a speaker's lectern at (0, 0), a table radius of 2, and a table scale of 2 yields this optimimal layout:
+The results seem accurate to the author's best determination. For instance, five tables, with a speaker's lectern at (0, 0), a table radius of 2, and a table scale of 2 yields this optimimal layout for a 20 x 25 room:
 
 ![](exhibits/sample_tables.png)
 
